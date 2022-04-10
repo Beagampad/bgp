@@ -1,0 +1,60 @@
+<div *ngIf="show_delete">
+    <h2 mat-dialog-title>Remove Row</h2>
+
+    <mat-dialog-content>
+        <!--Name-->
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput [value]="data.name">
+        </mat-form-field>
+        <!--Mail-->
+        <mat-form-field>
+            <mat-label>Mail</mat-label>
+            <input matInput [value]="data.email">
+        </mat-form-field>
+        <!--Department-->
+        <mat-form-field>
+            <mat-label>Department</mat-label>
+            <input matInput [value]="data.department">
+        </mat-form-field>
+    
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <button class="mat-raised-button"(click)="close()">Cancel</button>
+        <button class="mat-raised-button mat-primary"(click)="DeleteRow()">Delete</button>
+    </mat-dialog-actions>
+</div>
+
+<div *ngIf="!show_delete">
+    <h2 mat-dialog-title>Add Row</h2>
+
+    <mat-dialog-content>
+        
+            <!--Name-->
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input #nameinput matInput>
+            </mat-form-field>
+            <!--Mail-->
+            <mat-form-field>
+                <mat-label>Mail</mat-label>
+                <input #mailinput matInput>
+            </mat-form-field>
+            <!--Department-->
+            <mat-form-field>
+                <mat-label>Department</mat-label>
+                <mat-select (selectionChange) ="changeClient($event.value)">
+                    <mat-option value="Marketing">Marketing</mat-option>
+                    <mat-option value="Development">Development</mat-option>
+                </mat-select>
+            </mat-form-field>
+       
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <button class="mat-raised-button"(click)="close()">Cancel</button>
+        <button class="mat-raised-button mat-primary"(click)="AddRow()">Add Row</button>
+    </mat-dialog-actions>
+</div>
+
