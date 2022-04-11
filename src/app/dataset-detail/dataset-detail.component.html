@@ -1,10 +1,49 @@
 <div class="container">
+    <button mat-icon-button (click)="addRow()">Add Row</button>
+
     <section class="mat-typography">
-        <button mat-icon-button (click)="addRow()">Add Row</button>
+        
+        <div class="content1">
+            <h3 class="title-detail">MARKETING</h3>
+            <mat-form-field class="example-full-width">
+                <input matInput #myInputMark placeholder="Search" (input)="filterItemMark(myInputMark.value)">
+            </mat-form-field>
+                <ul class="content-list">
+                    <li *ngFor="let element of filteredItems_marketing; let i=index" class="content-li">
+                        <div class="content-img">
+                            <img class="img_avatar" src="../../assets/avatar.png" alt="avatar">
+                            <p class="category cat_color_ex" *ngIf="(calculateTime(element.created) < 1)">Experienced</p>
+                            <p class="category cat_color_ad" *ngIf="((calculateTime(element.created) < 2) && (calculateTime(element.created) > 1))">Advanced</p>
+                            <p class="category cat_color_sen" *ngIf="((calculateTime(element.created) < 3) && (calculateTime(element.created) > 2)) ">Senior</p>
+                            <p class="category cat_color_exp" *ngIf="(calculateTime(element.created) > 3) ">Expert</p>
+                            <p class="category cat_color_exp" *ngIf="element.created == undefined">Expert</p>
+                            <h3 class="name-title">{{element.name}}</h3>
+                            <p>{{element.email}}</p>
+                        </div>
+                    </li>
+                </ul>
+            
+        </div>
 
-        <div class="content">
-
-            <h3 class="title-detail">User_1 Account - Available Balance</h3>
+        <div class="content2">
+            <h3 class="title-detail">DEVELOPMENT</h3>
+            <mat-form-field class="example-full-width">
+                <input matInput #myInputDev placeholder="Search" (input)="filterItemDev(myInputDev.value)">
+            </mat-form-field>
+                <ul class="content-list">
+                    <li *ngFor="let element of filteredItems_development; let i=index" class="content-li">
+                        <div class="content-img">
+                            <img class="img_avatar" src="../../assets/avatar.png" alt="avatar">
+                            <p class="category cat_color_ex" *ngIf="(calculateTime(element.created) < 1)">Experienced</p>
+                            <p class="category cat_color_ad" *ngIf="((calculateTime(element.created) < 2) && (calculateTime(element.created) > 1))">Advanced</p>
+                            <p class="category cat_color_sen" *ngIf="((calculateTime(element.created) < 3) && (calculateTime(element.created) > 2)) ">Senior</p>
+                            <p class="category cat_color_exp" *ngIf="(calculateTime(element.created) > 3) ">Expert</p>
+                            <p class="category cat_color_exp" *ngIf="element.created == undefined">Expert</p>
+                            <h3 class="name-title">{{element.name}}</h3>
+                            <p>{{element.email}}</p>
+                        </div>
+                    </li>
+                </ul>
             
         </div>
 

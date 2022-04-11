@@ -27,9 +27,7 @@ export class ModalComponent implements OnInit {
 
         this.show_delete = true;
       }
-  
     }
-    
   }
 
   DeleteRow(){
@@ -46,6 +44,7 @@ export class ModalComponent implements OnInit {
       name: this.nameinput?.nativeElement.value,
       email: this.mailinput?.nativeElement.value,
       department: this.selected,
+      created: new Date(),
     }
 
     console.log('AddRow', data);
