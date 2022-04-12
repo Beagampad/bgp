@@ -6,9 +6,7 @@
         
         <div class="content1">
             <h3 class="title-detail">MARKETING</h3>
-            <!--<mat-form-field class="example-full-width">
-                <input matInput #myInputMark placeholder="Search" (input)="filterItemMark(myInputMark.value)">
-            </mat-form-field>-->
+           
             <input #myInputMark placeholder="Search" (input)="filterItemMark(myInputMark.value)" class="search">
                 <ul class="content-list">
                     <li *ngFor="let element of filteredItems_marketing; let i=index" class="content-li" >
@@ -29,9 +27,7 @@
 
         <div class="content2">
             <h3 class="title-detail">DEVELOPMENT</h3>
-            <!--<mat-form-field class="example-full-width">
-                <input matInput #myInputDev placeholder="Search" (input)="filterItemDev(myInputDev.value)">
-            </mat-form-field>-->
+            
             <input #myInputDev placeholder="Search" (input)="filterItemDev(myInputDev.value)" class="search">
                 <ul class="content-list">
                     <li *ngFor="let element of filteredItems_development; let i=index" class="content-li">
