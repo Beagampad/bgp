@@ -53,23 +53,9 @@ export class TableComponent implements OnInit {
     })
   }
 
- /* openDialogDelete(id:number, name:string, email:string, department:string) {
-
-    let dialogRef = this.dialog.open(ModalComponent, {
-      data: {
-        id: id,
-        name: name,
-        email: email,
-        department: department
-      },
-    });
-
-    dialogRef.afterClosed().subscribe(()  => {
-      console.log("Dialog output:");
-      this.getData();
-    }); 
-     
-  }*/
+  cancelEdition(){
+    this.editRowId = 0; //reset
+  }
 
   openDialog(id?:number, name?:string, email?:string, department?:string) {
 

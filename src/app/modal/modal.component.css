@@ -1,0 +1,7 @@
+mat-dialog-content{
+    display: grid;
+    width: 360px;
+}
+.mat-raised-button{
+    margin-right: 10px;
+}

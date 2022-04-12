@@ -30,12 +30,19 @@ export class DatasetDetailComponent implements OnInit {
    getData(): void {
     this.tableService.getAll().subscribe((res) => {
           console.log('getData', res);
+          //Reset
+          this.filteredItems_marketing = [];
+          this.elements_marketing = [];
+          this.filteredItems_development = [];
+          this.elements_development = [];
+
           this.elements = res;
 
           this.elements.forEach(element =>{
             if((element.department === 'Marketing') || (element.department === 'marketing')){
               this.elements_marketing.push(element);
               this.filteredItems_marketing = Object.assign([], this.elements_marketing);
+              console.log('filteredItems_marketing', this.filteredItems_marketing);
 
             }else{
               this.elements_development.push(element);

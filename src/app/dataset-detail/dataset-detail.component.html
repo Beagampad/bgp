@@ -1,15 +1,17 @@
+<button (click)="addRow()" class="add_btn">ADD ROW</button>
 <div class="container">
-    <button mat-icon-button (click)="addRow()">Add Row</button>
+    
 
     <section class="mat-typography">
         
         <div class="content1">
             <h3 class="title-detail">MARKETING</h3>
-            <mat-form-field class="example-full-width">
+            <!--<mat-form-field class="example-full-width">
                 <input matInput #myInputMark placeholder="Search" (input)="filterItemMark(myInputMark.value)">
-            </mat-form-field>
+            </mat-form-field>-->
+            <input #myInputMark placeholder="Search" (input)="filterItemMark(myInputMark.value)" class="search">
                 <ul class="content-list">
-                    <li *ngFor="let element of filteredItems_marketing; let i=index" class="content-li">
+                    <li *ngFor="let element of filteredItems_marketing; let i=index" class="content-li" >
                         <div class="content-img">
                             <img class="img_avatar" src="../../assets/avatar.png" alt="avatar">
                             <p class="category cat_color_ex" *ngIf="(calculateTime(element.created) < 1)">Experienced</p>
@@ -18,7 +20,7 @@
                             <p class="category cat_color_exp" *ngIf="(calculateTime(element.created) > 3) ">Expert</p>
                             <p class="category cat_color_exp" *ngIf="element.created == undefined">Expert</p>
                             <h3 class="name-title">{{element.name}}</h3>
-                            <p>{{element.email}}</p>
+                            <p class="email">{{element.email}}</p>
                         </div>
                     </li>
                 </ul>
@@ -27,9 +29,10 @@
 
         <div class="content2">
             <h3 class="title-detail">DEVELOPMENT</h3>
-            <mat-form-field class="example-full-width">
+            <!--<mat-form-field class="example-full-width">
                 <input matInput #myInputDev placeholder="Search" (input)="filterItemDev(myInputDev.value)">
-            </mat-form-field>
+            </mat-form-field>-->
+            <input #myInputDev placeholder="Search" (input)="filterItemDev(myInputDev.value)" class="search">
                 <ul class="content-list">
                     <li *ngFor="let element of filteredItems_development; let i=index" class="content-li">
                         <div class="content-img">
@@ -40,7 +43,7 @@
                             <p class="category cat_color_exp" *ngIf="(calculateTime(element.created) > 3) ">Expert</p>
                             <p class="category cat_color_exp" *ngIf="element.created == undefined">Expert</p>
                             <h3 class="name-title">{{element.name}}</h3>
-                            <p>{{element.email}}</p>
+                            <p class="email">{{element.email}}</p>
                         </div>
                     </li>
                 </ul>

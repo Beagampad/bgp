@@ -1,8 +1,9 @@
+<button (click)="openDialog()" class="add_btn">ADD ROW</button>
+
 <div class="container">
     <section class="mat-typography">
-        <h1>Plytix - Prueba Frontend: Beatriz Gámez Padial</h1>
+        <h1 style="text-align: center">Plytix - Prueba Frontend: Beatriz Gámez Padial</h1>
 
-        <button mat-icon-button (click)="openDialog()">Add Row</button>
 
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
             <!-- Name Column -->
@@ -58,12 +59,12 @@
                         <mat-icon>edit</mat-icon>
                     </button>
                     <button *ngIf="element.id === editRowId" mat-icon-button class="material-icons app-toolbar-menu save-button" (click)= "ConfirmEdition(element.id, element.name, element.email, element.department)" matTooltip="Save Changes" color="green">
-                        <mat-icon>check</mat-icon>
+                        <mat-icon [ngStyle]="{'color':'green'}">check</mat-icon>
                     </button>
                     <button *ngIf="element.id != editRowId" mat-icon-button class="material-icons app-toolbar-menu save-button" (click)="openDialog(element.id, element.name, element.email, element.department)" matTooltip="Save Changes" color="warn">
                         <mat-icon>delete</mat-icon>
                     </button>
-                    <button *ngIf="element.id === editRowId" mat-icon-button class="material-icons app-toolbar-menu save-button" matTooltip="Save Changes" color="warn">
+                    <button *ngIf="element.id === editRowId" mat-icon-button class="material-icons app-toolbar-menu save-button" (click)="cancelEdition()" color="warn">
                         <mat-icon>cancel</mat-icon>
                     </button>
                 </td>

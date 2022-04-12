@@ -8,12 +8,32 @@
     height: 200px;
     padding: 10px;
     display: flex;
+    font-family: 'Arvo' !important;
+}
+.add_btn{
+    float: right;
+    margin-right: 85px;
+    background-color: #43c5b8;
+    border: 0;
+    padding: 12px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
 }
 .title-detail{
-    color: #9e9e9e;
+    color: #4a4646;
+    font-weight: 600;
 }
 .available-detail{
     color: #009688;
+}
+.search{
+    width: 800px;
+    height: 30px;
+    margin-bottom: 20px;
+    border-color: #8080803b;
+    border-radius: 5px;
 }
 .content1{
     padding: 10px;
@@ -44,24 +64,27 @@
 }
 .name-title{
     margin-bottom: 0;
+    font-weight:600;
 }
 .content-img{
     text-align: center;
 }
 .img_avatar{
-    height: 50px;
+    height: 75px;
     border-radius: 100%;
+    position: relative;
 }
 .category{
     margin-top: -17px;
     color: whitesmoke;
+    position: relative;
 }
 .cat_color_ex{
     background-color: #009688;
     border-radius: 8px;
 }
 .cat_color_exp{
-    background-color: #c4c57d9f;
+    background-color: #ff9800;
     border-radius: 8px;
 }
 .cat_color_sen{
@@ -71,4 +94,7 @@
 .cat_color_ad{
     background-color: #9a63a185;
     border-radius: 8px;
+}
+.email{
+    margin-top: 0;
 }

@@ -4,6 +4,17 @@
     background-color: #80808021;
     height: 100%;
 }
+.add_btn{
+    float: right;
+    margin-right: 85px;
+    background-color: #43c5b8;
+    border: 0;
+    padding: 12px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
 .title{
     text-align: center;
 }
@@ -12,6 +23,9 @@ table {
 }
 tr{
     cursor: pointer;
+}
+th{
+    font-weight: 600;
 }
 td.mat-cell:focus{
     outline: none;
